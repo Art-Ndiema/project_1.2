@@ -32,12 +32,12 @@ export const Banner = () => {
       setDelta(prevDelta => prevDelta / 2); // the speed of deleting text has to be faster than that of typing text
     }
 
-    if (!isDeleting && updatedText === fullText) // checking if user is still deleting
+    if (!isDeleting && updatedText === fullText) // checking if system is still deleting
     {
       setIsDeleting(true);
       setIndex(prevIndex => prevIndex - 1);
       setDelta(period); //setting delta back to its normal pace
-    } else if (isDeleting && updatedText === '') //checking if user has finished deleting
+    } else if (isDeleting && updatedText === '') //checking if system has finished deleting text
     {
       setIsDeleting(false);
       setLoopNum(loopNum + 1); //moving to the next text

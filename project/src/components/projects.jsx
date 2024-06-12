@@ -1,5 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import colorSharp2 from "../assets/images/color-sharp2.png";
+import projImg1 from "../assets/images/lilbot image.png";
+import projImg2 from "../assets/images/teamwork.png";
+import projImg3 from "../assets/images/smile-bot image.png";
+
 
 export const Projects =() => {
     const projects =[
@@ -55,13 +60,34 @@ export const Projects =() => {
                       <Nav.Link eventKey="third">Tab 3</Nav.Link>
                     </Nav.Item>
                     </Nav>
-                    
-                    </Tab.Container>
+                    <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
+                        <Tab.Pane eventKey="first">
+                            <Row>
+                                {
+                                   projects.map((project, index) => {
+                                    return(
+                                        <projectCard key={index}
+                                        {...project}
+                                        />
+                                    )
+                                   } )
+                                }
+                            </Row>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="section">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis dolorum facere nemo quia beatae aliquid, dolore saepe pariatur explicabo quaerat! Deleniti repellendus aut molestiae eos? Tempora doloremque perspiciatis impedit repudiandae.</p>
+                        </Tab.Pane>
+                        <Tab.Pane eventKey="third">
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Blanditiis dolorum facere nemo quia beatae aliquid, dolore saepe pariatur explicabo quaerat! Deleniti repellendus aut molestiae eos? Tempora doloremque perspiciatis impedit repudiandae.</p>
+                        </Tab.Pane>
+                    </Tab.Content>
+                    </Tab.Container> //our customized tab
                 </div>
                 </TrackVisibility>
                 </Col>
                 </Row>
             </Container>
+            <img className="background-image-right" src={colorSharp2}></img>
         </section>
     )
 }
