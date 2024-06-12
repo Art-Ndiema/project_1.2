@@ -38,7 +38,7 @@ setText(updatedText);//updating state to our updated text
     } else if (isDeleting && updatedText === '') //checking if user has finished deleting
     {
       setIsDeleting(false);
-      setLoopNum(loopNum + 1);//updating our list "the index"
+      setLoopNum(loopNum + 1);//moving to the next text
       setIndex(1);
       setDelta(500);
     } else {
@@ -52,8 +52,8 @@ return (
     <Row className="align-items-center">
     <Col xs={12} md={8} xl={10}>
     <span className="tagline">"Karibu to this Web App"</span>
-     <h1> {'Hello my name is Grace but you can call me Ndiema'} <span className="wrap"> Web dev, Dart Flutter girl, blah blah blah</span> </h1>
-    <p> Something something about me , long story short, lets say you have read alot of lines here and you are impressed😊</p>
+     <h1> {'Hello my name is Art Ndiema but you can call me Awesome hehehe'} <span className="wrap"> {text}</span> </h1>
+   <p> <h3> Something something about me , long story short, lets say you have read alot of lines here and you are impressed😊</h3></p>
     <button onClick={() => console.log('Madam, the connect button was clicked')}> Let's connect<ArrowRightCircle size={30}/> </button>
     </Col>
     <Col xs={12} md={6} xl={8}>
@@ -63,4 +63,4 @@ return (
     </Container>
      </section>
     )
-}
+};
