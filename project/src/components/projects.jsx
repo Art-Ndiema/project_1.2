@@ -5,6 +5,7 @@ import projImg1 from "../assets/images/lilbot image.png";
 import projImg2 from "../assets/images/teamwork.png";
 import projImg3 from "../assets/images/smile-bot image.png";
 import TrackVisibility from "react-on-screen";
+import { ProjectCard } from "./ProjectCard";
 
 const Projects = () => {
   const projects = [
@@ -55,7 +56,7 @@ const Projects = () => {
                   <h2>Projects</h2>
                   <p>
                     Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
+                    typesetting industry. Lorem Ipsum has been the industry&apos;s
                     standard dummy text ever since the 1500s, when an unknown
                     printer took a galley of type and scrambled it to make a
                     type specimen book.
@@ -84,9 +85,9 @@ const Projects = () => {
                     >
                       <Tab.Pane eventKey="first">
                         <React.Fragment>placeholder</React.Fragment>
-                        {/* {projects.map((project, index) => {
-                          return <ProjectCard key={index} {...project} />; add ProjectCard component
-                        })} */}
+                        {projects.map((project, index) => {
+                          return <ProjectCard key={index} {...project} />;
+                        })} 
                       </Tab.Pane>
                       <Tab.Pane eventKey="section">
                         <p>
